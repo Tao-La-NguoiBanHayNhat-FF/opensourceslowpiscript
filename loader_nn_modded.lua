@@ -1,4 +1,4 @@
-// DevKey : Cracked_Script
+-- DevKey : Cracked_Script
 
 getgenv().LoaderExecCount = getgenv().LoaderExecCount + 1
 
