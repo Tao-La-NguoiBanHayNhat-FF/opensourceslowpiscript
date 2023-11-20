@@ -440,7 +440,7 @@ local function premiumCheck()
 
         local whitelistChecker = http_request(
             {
-                Url = "https://slowpihax-default-rtdb.firebaseio.com/Whitelist.json",
+                Url = "https://raw.githubusercontent.com/Tao-La-NguoiBanHayNhat-FF/opensourceslowpiscript/main/premiumlist.json",
                 Method = "GET",
             }
         )
@@ -480,7 +480,7 @@ local function premiumCheck()
                 userKey = true
             end
 
-            if identifier == Fingerprint then
+            if identifier == "" then
                 identifier = true
             elseif identifier == "" then
                 identifier = true
