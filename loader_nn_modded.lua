@@ -8,4 +8,5 @@ elseif getgenv().key == "Put-Your-Key-Inside-Here" then
     getgenv().key = "none"
 end
 script_key = nil
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Tao-La-NguoiBanHayNhat-FF/opensourceslowpiscript/main/loader_header.lua"))()
+-- loadstring(game:HttpGet("https://raw.githubusercontent.com/Tao-La-NguoiBanHayNhat-FF/opensourceslowpiscript/main/loader_header.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tao-La-NguoiBanHayNhat-FF/opensourceslowpiscript/main/original_load.lua"))()
