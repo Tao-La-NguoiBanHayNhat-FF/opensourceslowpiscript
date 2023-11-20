@@ -414,7 +414,7 @@ end
 
 local firstFour = string.sub(getgenv().key, 1, 4)
 
-if getgenv().key == "DevKey_slowpihax" then
+if getgenv().key == "Cracked_Script" then
     getgenv().key = "mGXrkthUqruDYwODWkPnIIaSWmTNwujR"
 end
 
@@ -479,7 +479,7 @@ local function premiumCheck()
             if userKey == getgenv().key then
                 userkey = true
             else
-                userKey = false
+                userKey = true
             end
 
             if identifier == Fingerprint then
