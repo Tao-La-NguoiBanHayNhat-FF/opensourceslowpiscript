@@ -440,7 +440,7 @@ local function premiumCheck()
 
         local whitelistChecker = http_request(
             {
-                Url = "https://raw.githubusercontent.com/Tao-La-NguoiBanHayNhat-FF/opensourceslowpiscript/main/premiumlist.json",
+                Url = "https://slowpihax-default-rtdb.firebaseio.com/Whitelist.json",
                 Method = "GET",
             }
         )
