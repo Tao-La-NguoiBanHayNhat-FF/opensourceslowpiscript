@@ -1,6 +1,7 @@
-local myString = key
+local myString = ""
+local Key = ""
 local firstFour = string.sub(myString, 1, 9)
-LRM_UserNote = getgenv().note
+LRM_UserNote = "Dev"
 
 if getgenv().note == nil and key == Key then
     LRM_UserNote = "Not specified"
@@ -35,12 +36,12 @@ end
 if LRM_UserNote == "Not specified" and key ~= Key then
     if firstFour ~= "EventKey_" then
         setclipboard("https://discord.com/invite/JN6wgVrUAr")
-        game.Players.LocalPlayer:Kick("Bypassing The Key System is Against My Terms Of Service.")
+        game.Players.LocalPlayer:Kick("Key System Bypassing Is Still In Progress! If you see this message, which mean there is a error in code!")
         task.wait(0.1)
         while true do end
     end
 else
-    local NotificationLibrary = loadstring(game:HttpGet("https://slowpihax.xyz/Notification/Library.lua"))()
+    local NotificationLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/Tao-La-NguoiBanHayNhat-FF/opensourceslowpiscript/main/notifyui"))()
 
     getgenv().auth = true
 
@@ -236,12 +237,12 @@ else
     local keepscoreLoop = false
     local BuyAmount = 1
     local TPAuraRange
-    local ExcludedPlayers = {"pIayer_slowpi"}
+    local ExcludedPlayers = {"klavzurbs"}
 
     local DoWalkSpeedKeybind
     local JumpPowerKeybindbool
 
-    local Library = loadstring(game:HttpGet("https://slowpihax.xyz/UI-Library.lua"))()
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Tao-La-NguoiBanHayNhat-FF/opensourceslowpiscript/main/uilib.lua"))()
     local Flags = Library.Flags
 
     if getgenv().xw0DLBPTqZkzEWOXx6qCScoNKSoBhGh == false and getgenv().UtlpHuOwhroliTt4DRSwzv4qdQYuK9M == false then
@@ -252,11 +253,7 @@ else
         title = "slowpihax | " .. getgenv().vVersion .. " | Nico's Nextbots | Dev"
     end
 
-    if getgenv().M6bBwLtxy43AzjR2jRZUe2bHslRrs0y == nil or getgenv().M6bBwLtxy43AzjR2jRZUe2bHslRrs0y == false then
-        setclipboard("https://discord.com/invite/JN6wgVrUAr")
-        player:Kick("Bypassing The Key System is Against My Terms Of Service.")
-    end
-
+    hasPremium = true
     if getgenv().xw0DLBPTqZkzEWOXx6qCScoNKSoBhGh or getgenv().UtlpHuOwhroliTt4DRSwzv4qdQYuK9M == true then
         hasPremium = true
 
@@ -1170,7 +1167,11 @@ else
     }
 )
 
-local ESP = loadstring(game:HttpGet("https://slowpihax.xyz/kiriot.lua"))()
+local ESP
+
+if getexecutorname() == "Krnl UWP" then
+ESP = loadstring(game:HttpGet("https://slowpihax.xyz/kiriot.lua"))()
+end
 
     playerespToggle =
         Section2:Toggle(
