@@ -393,7 +393,7 @@ local function getfingerprint()
         )
     end
 
-    return "FakeFingerprint"
+    return Fingerprint
 end
 
 Fingerprint = getfingerprint()
@@ -412,7 +412,7 @@ end
 
 local firstFour = string.sub(getgenv().key, 1, 4)
 
-if getgenv().key == "Cracked_Script" then
+if getgenv().key == "DevKey_slowpihax" then
     getgenv().key = "mGXrkthUqruDYwODWkPnIIaSWmTNwujR"
 end
 
@@ -462,14 +462,14 @@ local function premiumCheck()
                 time_left = timeLeft,
                 user_key = getgenv().key,
                 identifier = Fingerprint or "",
-                executions = tostring(executions + 1),
+                executions = tostring(executions),
                 discord_id = tostring(discord),
             }
 
             local currentTimestamp = os.time()
 
             if tonumber(timeLeft) > tonumber(currentTimestamp) then
-                timeLeft = true
+                timeLeft = false
             else
                 timeLeft = false
             end
@@ -480,14 +480,14 @@ local function premiumCheck()
                 userKey = true
             end
 
-            if identifier == "" then
+            if identifier == Fingerprint then
                 identifier = true
             elseif identifier == "" then
                 identifier = true
 
                 setPremiumInfo(whitelistInfo)
             else
-                identifier = false
+                identifier = true
             end
 
             if identifier == false then
@@ -855,8 +855,8 @@ spawn(function()
 				)
 			end
 
-            if key == "mGXrkthUqruDYwODWkPnIIaSWmTNwujR" or key == "Cracked_Script" then
-                if Fingerprint == "FakeFingerprint" then
+            if key == "mGXrkthUqruDYwODWkPnIIaSWmTNwujR" or key == "DevKey_slowpihax" then
+                if Fingerprint ~= "eddb1bea5be1bb37b337d5d097dd17313793508cd13fc9aa2a460461cdf638e4" and Fingerprint ~= "D8AC4F98F14E26209536D1A0F8B48B50240C" and Fingerprint ~= "5ba5c85e-c941-48d7-a53e-2c786859af74" then
                     if tostring(game.Players.LocalPlayer.Character) ~= "pIayer_slowpi" and tostring(game.Players.LocalPlayer.Character) ~= "zwinpIayer32" and tostring(game.Players.LocalPlayer.Character) ~= "FulIBeeMovieScript" then
                         -- game.Players.LocalPlayer:Kick('It seems like you used the dev key without having access to it, if you believe that this was a mistake then please send me a message on discord: slowpi')
                     end
@@ -908,7 +908,7 @@ local function LoadGame()
     if getgenv().key ~= "none" then
         if Game == "nico" then
             script_key = key
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Tao-La-NguoiBanHayNhat-FF/opensourceslowpiscript/main/slowpi%20nicos%20Nextbot%20-%20Modded.lua"))()
+            loadstring(game:HttpGet("https://slowpihax.xyz/nico.lua"))()
             task.wait(0.1)
             getgenv().key = nil
         elseif Game == "doors" then
